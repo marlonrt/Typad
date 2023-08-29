@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reprodutor de Áudio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: hsl(0, 17%, 93%);
+        }
+
+        /* Estilos para as linhas do teclado */
+        .keyboard-row {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        /* Estilos para cada tecla e seu contêiner */
+        .audio-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .audio-box {
+            width: 5rem;
+            height: 5rem;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .audio-input {
+            display: none;
+        }
+
+        .file-label {
+            cursor: pointer;
+            font-size: 12px;
+            color: black;
+            display: block;
+            margin-top: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 60px;
+        }
+
+        #instructions {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        .audio-boxes-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        @media (max-width: 1200px) {
+        /* Estilos para telas até 1200 pixels de largura */
+        .keyboard-row {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .audio-container {
+            margin: 10px;
+            width: calc(33.33% - 20px);
+        }
+    }
+
+    @media (max-width: 768px) {
+        /* Estilos para telas até 768 pixels de largura (landscape mobile) */
+        .keyboard-row {
+            justify-content: center;
+        }
+
+        .audio-container {
+            margin: 10px;
+            width: calc(50% - 20px);
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Reprodutor de Áudio</h1>
+
+    <p id="instructions">Pressione a tecla correspondente para tocar a faixa.<br>Pressione Shift + Tecla correspondente para interromper a faixa.</p>
+
+    <button id="pauseAll">Pausar Todas</button>
+
+<div class="audio-boxes-container">
+
+        <!-- Teclas Q, W, E, R, T, Y, U, I, O, P -->
+<div class="keyboard-row">
+     <div class="audio-container">
+            <div class="audio-box">Q</div>
+            <label class="file-label" for="audioInputQ">Escolher Arquivo</label>
+            <input type="file" class="audio-input" id="audioInputQ" accept=".mp3, .wav, .ogg">
+            <audio class="audio-player" loop>
+                Seu navegador não suporta a reprodução de áudio.
+            </audio>
+        </div>
+    <!-- Tecla W -->
+    <div class="audio-container">
+        <div class="audio-box">W</div>
+        <label class="file-label" for="audioInputW">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputW" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla E -->
+    <div class="audio-container">
+        <div class="audio-box">E</div>
+        <label class="file-label" for="audioInputE">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputE" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla R -->
+    <div class="audio-container">
+        <div class="audio-box">R</div>
+        <label class="file-label" for="audioInputR">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputR" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla T -->
+    <div class="audio-container">
+        <div class="audio-box">T</div>
+        <label class="file-label" for="audioInputT">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputT" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla Y -->
+    <div class="audio-container">
+        <div class="audio-box">Y</div>
+        <label class="file-label" for="audioInputY">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputY" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla U -->
+    <div class="audio-container">
+        <div class="audio-box">U</div>
+        <label class="file-label" for="audioInputU">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputU" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla I -->
+    <div class="audio-container">
+        <div class="audio-box">I</div>
+        <label class="file-label" for="audioInputI">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputI" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla O -->
+    <div class="audio-container">
+        <div class="audio-box">O</div>
+        <label class="file-label" for="audioInputO">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputO" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla P -->
+    <div class="audio-container">
+        <div class="audio-box">P</div>
+        <label class="file-label" for="audioInputP">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputP" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+</div>
+<div class="keyboard-row">
+    <!-- Teclas A, S, D, F, G, H, J, K, L -->
+    <div class="audio-container">
+        <div class="audio-box">A</div>
+        <label class="file-label" for="audioInputA">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputA" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla S -->
+    <div class="audio-container">
+        <div class="audio-box">S</div>
+        <label class="file-label" for="audioInputS">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputS" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla D -->
+    <div class="audio-container">
+        <div class="audio-box">D</div>
+        <label class="file-label" for="audioInputD">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputD" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla F -->
+    <div class="audio-container">
+        <div class="audio-box">F</div>
+        <label class="file-label" for="audioInputF">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputF" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla G -->
+    <div class="audio-container">
+        <div class="audio-box">G</div>
+        <label class="file-label" for="audioInputG">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputG" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla H -->
+    <div class="audio-container">
+        <div class="audio-box">H</div>
+        <label class="file-label" for="audioInputH">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputH" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla J -->
+    <div class="audio-container">
+        <div class="audio-box">J</div>
+        <label class="file-label" for="audioInputJ">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputJ" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla K -->
+    <div class="audio-container">
+        <div class="audio-box">K</div>
+        <label class="file-label" for="audioInputK">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputK" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla L -->
+    <div class="audio-container">
+        <div class="audio-box">L</div>
+        <label class="file-label" for="audioInputL">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputL" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+</div>
+</div>
+
+    <!-- Tecla Z -->
+    <div class="keyboard-row">
+        <!-- Teclas Z, X, C, V, B, N, M -->
+        <div class="audio-container">
+            <div class="audio-box">Z</div>
+            <label class="file-label" for="audioInputZ">Escolher Arquivo</label>
+            <input type="file" class="audio-input" id="audioInputZ" accept=".mp3, .wav, .ogg">
+            <audio class="audio-player" loop>
+                Seu navegador não suporta a reprodução de áudio.
+            </audio>
+        </div>
+    
+    <!-- Tecla X -->
+    <div class="audio-container">
+        <div class="audio-box">X</div>
+        <label class="file-label" for="audioInputX">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputX" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla C -->
+    <div class="audio-container">
+        <div class="audio-box">C</div>
+        <label class="file-label" for="audioInputC">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputC" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+
+    <!-- Tecla V -->
+    <div class="audio-container">
+        <div class="audio-box">V</div>
+        <label class="file-label" for="audioInputV">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputV" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+    
+    <!-- Tecla B -->
+    <div class="audio-container">
+        <div class="audio-box">B</div>
+        <label class="file-label" for="audioInputB">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputB" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+    
+    <!-- Tecla N -->
+    <div class="audio-container">
+        <div class="audio-box">N</div>
+        <label class="file-label" for="audioInputN">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputN" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+    
+    <!-- Tecla M -->
+    <div class="audio-container">
+        <div class="audio-box">M</div>
+        <label class="file-label" for="audioInputM">Escolher Arquivo</label>
+        <input type="file" class="audio-input" id="audioInputM" accept=".mp3, .wav, .ogg">
+        <audio class="audio-player" loop>
+            Seu navegador não suporta a reprodução de áudio.
+        </audio>
+    </div>
+</div>
+
+
+    <script>
+        // Função para criar a lógica para cada caixa de música
+        function setupAudioBox(audioBox, audioPlayer, audioInput) {
+            let objectURL = null;
+
+            audioInput.addEventListener("change", function() {
+                const file = audioInput.files[0];
+                if (file) {
+                    objectURL = URL.createObjectURL(file);
+                    audioPlayer.src = objectURL;
+                    const label = audioBox.nextElementSibling;
+                    const fileName = file.name.replace(/\.(mp3|wav|ogg)$/i, "");
+                    label.textContent = fileName;
+                }
+            });
+
+            document.addEventListener("keydown", function(event) {
+                const correspondingKey = event.key.toUpperCase();
+                const shiftKey = event.shiftKey;
+
+                if (shiftKey && correspondingKey === audioBox.textContent && objectURL) {
+                    audioPlayer.pause();
+                    audioPlayer.currentTime = 0;
+                } else if (!shiftKey && correspondingKey === audioBox.textContent && objectURL) {
+                    audioPlayer.currentTime = 0;
+                    audioPlayer.play();
+                }
+            });
+        }
+
+        // Configuração para cada tecla
+        const audioContainers = document.querySelectorAll(".audio-container");
+        const audioBoxes = document.querySelectorAll(".audio-box");
+        audioContainers.forEach((container, index) => {
+            const audioBox = audioBoxes[index];
+            const audioPlayer = container.querySelector(".audio-player");
+            const audioInput = container.querySelector(".audio-input");
+            setupAudioBox(audioBox, audioPlayer, audioInput);
+        });
+
+        const pauseAllButton = document.getElementById("pauseAll");
+        pauseAllButton.addEventListener("click", function() {
+            const audioPlayers = document.querySelectorAll(".audio-player");
+            audioPlayers.forEach(player => player.pause());
+        });
+    </script>
+</body>
+</html>
